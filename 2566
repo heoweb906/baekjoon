@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <climits>
+
+using namespace std;
+
+int main()
+{
+	ios_base::sync_with_stdio;
+	cin.tie(0);
+	cout.tie(0);
+
+	int Location_x, Location_y;
+	int max = 0;
+
+	for (int i = 0; i < 9; i++)
+	{
+		for (int j = 0 ; j < 9; j++)
+		{
+			int x;
+			cin >> x;
+			if (x >= max)
+			{
+				max = x;
+				Location_x = i + 1;
+				Location_y = j + 1;
+			}
+		}
+	}
+
+	cout << max << "\n" << Location_x << " " << Location_y;
+
+	return 0;
+}
